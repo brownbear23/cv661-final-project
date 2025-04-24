@@ -1,2 +1,5 @@
-trash-detection/data/raw/
 .idea/
+.venv/
+./library/TACO_local/data/
+./library/TACO_local/HOTACO/data/
+/Users/billhan/Desktop/Dev-JHU25SS/CV/cv-final-project/src/yolo/runs/
