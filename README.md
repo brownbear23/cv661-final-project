@@ -1,4 +1,4 @@
-# Trash Detection
+# HOpkins Trash Annotations in COntext (HOTACO)
 
 ## Getting Started
 
