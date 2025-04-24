@@ -11,10 +11,10 @@ from io import BytesIO
 import sys
 
 def download_taco():
-    os.makedirs('../data/raw/taco', exist_ok=True)
+    os.makedirs('./data/raw/taco', exist_ok=True)
     
     annotations_url = "https://github.com/pedropro/TACO/raw/master/data/annotations.json"
-    annotations_path = '../data/raw/taco/annotations.json'
+    annotations_path = './data/raw/taco/annotations.json'
     
     if not os.path.exists(annotations_path):
         print("Downloading TACO annotations file...")
@@ -22,7 +22,7 @@ def download_taco():
         with open(annotations_path, 'wb') as f:
             f.write(response.content)
     
-    dataset_dir = '../data/raw/taco'
+    dataset_dir = './data/raw/taco'
     
     print('Note: If for any reason the connection is broken, just run this script again and it will start where it left off.')
     
