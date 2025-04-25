@@ -16,9 +16,13 @@ source .venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt
 
+mkdir /workspace/lib/
 mkdir /workspace/lib/PY
+
 echo 'export PIP_CACHE_DIR=/workspace/lib/PY' >> ~/.bashrc
 source ~/.bashrc
+
+source .venv/bin/activate
 
 echo $PIP_CACHE_DIR
 
