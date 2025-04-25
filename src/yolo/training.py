@@ -1,17 +1,17 @@
 from ultralytics import YOLO
 
 if __name__ == "__main__":
-    # Define parameters directly
-    base_model_name = "../library/litter-detection/runs/detect/train/yolov8m_100epochs/weights/best.pt" #
-    num_epochs = 100
+    base_models = ["../library/litter-detection/runs/detect/train/yolov8m_100epochs/weights/best.pt",
+                   "../library/YOLO_weights/yolo11m.pt"]
+
 
     # Load the model
-    model = YOLO(base_model_name)
+    model = YOLO(base_models[0])
 
     # Train the model
     model.train(
         data="./TACO.yaml",
-        epochs=num_epochs,
+        epochs=100,
         patience=25,
         imgsz=640,
         device='cpu',
