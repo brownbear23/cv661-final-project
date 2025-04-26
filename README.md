@@ -29,7 +29,22 @@ echo $PIP_CACHE_DIR
 git submodule init
 git submodule update --recursive
 
+
+# After the network storage setup:
+source .venv/bin/activate
+echo 'export PIP_CACHE_DIR=/workspace/lib/PY' >> ~/.bashrc
+source ~/.bashrc
+source .venv/bin/activate
+echo $PIP_CACHE_DIR
+
+
 ```
+HOTACO and TACO dataset must be imported to:
+- ./library/HOTACO/data/
+- ./library/TACO_local/data/
+
+yolo11m.pt weight must be imported to:
+- ./library/YOLO_weights/
 
 ## Modules trained
 **Train Model #1: Fine-Tuning after Transfer Learning**
