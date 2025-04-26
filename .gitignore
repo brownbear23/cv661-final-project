@@ -4,4 +4,3 @@
 ./library/TACO_local/data/
 ./library/HOTACO/data/
 ./library/YOLO_weights/
-./src/yolo/runs/
