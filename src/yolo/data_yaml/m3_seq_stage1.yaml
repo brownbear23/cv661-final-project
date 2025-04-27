@@ -1,13 +1,13 @@
 #path: ../library/HOTACO/data
 
-train: /workspace/cv661-final-project/library/HOTACO/data/train/images  # Path to training images
-val: /workspace/cv661-final-project/library/HOTACO/data/valid/images     # Path to validation images
-test: /workspace/cv661-final-project/library/HOTACO/data/test/images   # Path to test images
+train: /workspace/cv661-final-project/library/TACO_local/data_splits/train/images
+val: /workspace/cv661-final-project/library/TACO_local/data_splits/valid/images
+test: /workspace/cv661-final-project/library/TACO_local/data_splits/test/images
 
 # Corresponding label paths (YOLO format: one text file per image)
-train_labels: /workspace/cv661-final-project/library/HOTACO/data/train/labels  # Path to training labels
-val_labels: /workspace/cv661-final-project/library/HOTACO/data/valid/labels      # Path to validation labels
-test_labels: /workspace/cv661-final-project/library/HOTACO/data/test/labels    # Path to test labels
+train_labels: /workspace/cv661-final-project/library/TACO_local/data_splits/train/labels
+val_labels: /workspace/cv661-final-project/library/TACO_local/data_splits/valid/labels
+test_labels: /workspace/cv661-final-project/library/TACO_local/data_splits/test/labels
 
 
 # Class Numbers
