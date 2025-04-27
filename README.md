@@ -46,7 +46,7 @@ HOTACO and TACO dataset must be imported to:
 yolo11m.pt weight must be imported to:
 - ./library/YOLO_weights/
 
-## Modules trained
+## Models trained
 **Train Model #1: Fine-Tuning after Transfer Learning**
 
 Fine-tune a checkpoint model (`best.pt`) that was previously transfer-learned on the TACO dataset. Use [`yolov8m.pt`](http://yolov8m.pt) as the original base model, and fine-tune it on the HOTACO dataset to specialize it for your target domain.
