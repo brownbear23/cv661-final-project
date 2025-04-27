@@ -1,7 +1,7 @@
 .idea/
 .venv/
 .DS_Store
-library/TACO_local/data/*
+library/TACO_local/data_splits/*
+library/HOTACO_TACO_combined/data/*
 library/HOTACO/data/*
 library/YOLO_weights/*
-runs/*
