@@ -1,6 +1,13 @@
 from ultralytics import YOLO
 from datetime import datetime
 import pytz
+from enum import Enum
+
+
+class TestingType(Enum):
+    NORMAL = 1
+    M2_HOTACO_ONLY = 2
+    BASE = 3
 
 # Set up timestamp
 est = pytz.timezone('US/Eastern')
@@ -8,9 +15,9 @@ current_time = datetime.now(est)
 current_time_str = current_time.strftime("%y%m%d_%H%M%S")
 print(f"Processing: test_best_{current_time_str}")
 
-NORMAL_TESTING = False
+TESTING_TYPE = TestingType.BASE
 
-if NORMAL_TESTING:
+if TESTING_TYPE == TestingType.NORMAL:
     print("Normal testing for all three models")
     best_models = ["/workspace/cv661-final-project/runs/detect/m1_yolo8_train_250427_002807/weights/best.pt",
                    "/workspace/cv661-final-project/runs/detect/m2_single_train_250427_011321/weights/best.pt",
@@ -30,7 +37,7 @@ if NORMAL_TESTING:
             name=test_name + current_time_str,
         )
 
-else:
+elif TESTING_TYPE == TestingType.M2_HOTACO_ONLY:
     print("m2_single_HOTACO_only_test")
     # For HOTACO test data set only validation
     test_name = "m2_single_HOTACO_only_test_"
@@ -41,4 +48,13 @@ else:
         split='test',
         name=test_name + current_time_str,
     )
-
+elif TESTING_TYPE == TestingType.BASE:
+    print("Base model test (original model based on YOLO v8)")
+    test_name = "base_model_test_"
+    best_model = "/workspace/cv661-final-project/library/litter-detection/runs/detect/train/yolov8m_100epochs/weights/best.pt"
+    model = YOLO(best_model)
+    model.val(
+        data="/workspace/cv661-final-project/src/yolo/data_yaml/base_HOTACO_only_test.yaml",
+        split='test',
+        name=test_name + current_time_str,
+    )

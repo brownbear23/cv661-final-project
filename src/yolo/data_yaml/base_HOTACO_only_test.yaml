@@ -1,16 +1,17 @@
 
 train: /workspace/cv661-final-project/library/HOTACO/data/train/images # NOT USED
 val: /workspace/cv661-final-project/library/HOTACO/data/valid/images # NOT USED
-test: /workspace/cv661-final-project/library/HOTACO/data/test/images
+test: /workspace/cv661-final-project/library/HOTACO/test_data_for_base/test/images
 
 # Corresponding label paths (YOLO format: one text file per image)
 train_labels: /workspace/cv661-final-project/library/HOTACO/data/train/labels # NOT USED
 val_labels: /workspace/cv661-final-project/library/HOTACO/data/valid/labels # NOT USED
-test_labels: /workspace/cv661-final-project/library/HOTACO/data/test/labels
+test_labels: /workspace/cv661-final-project/library/HOTACO/test_data_for_base/test/labels
 
 
 # Class Numbers
-nc: 61
+#nc: 61
+nc: 60
 
 names:
   0: Aluminium foil
@@ -73,7 +74,7 @@ names:
   57: Styrofoam piece
   58: Unlabeled litter
   59: Cigarette
-  60: Gaming device # added
+#  60: Gaming device # added
 
 
 # names: ['Aluminium foil', 'Battery', 'Aluminium blister pack', 'Carded blister pack', 'Other plastic bottle', 'Clear plastic bottle', 'Glass bottle', 'Plastic bottle cap', 'Metal bottle cap', 'Broken glass', 'Food Can', 'Aerosol', 'Drink can', 'Toilet tube', 'Other carton', 'Egg carton', 'Drink carton', 'Corrugated carton', 'Meal carton', 'Pizza box', 'Paper cup', 'Disposable plastic cup', 'Foam cup', 'Glass cup', 'Other plastic cup', 'Food waste', 'Glass jar', 'Plastic lid', 'Metal lid', 'Other plastic', 'Magazine paper', 'Tissues', 'Wrapping paper', 'Normal paper', 'Paper bag', 'Plastified paper bag', 'Plastic film', 'Six pack rings', 'Garbage bag', 'Other plastic wrapper', 'Single-use carrier bag', 'Polypropylene bag', 'Crisp packet', 'Spread tub', 'Tupperware', 'Disposable food container', 'Foam food container', 'Other plastic container', 'Plastic glooves', 'Plastic utensils', 'Pop tab', 'Rope & strings', 'Scrap metal', 'Shoe', 'Squeezable tube', 'Plastic straw', 'Paper straw', 'Styrofoam piece', 'Unlabeled litter', 'Cigarette']
