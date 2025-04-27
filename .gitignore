@@ -4,4 +4,6 @@
 library/TACO_local/data_splits/*
 library/HOTACO_TACO_combined/data/*
 library/HOTACO/data/*
+library/HOTACO/test_data_for_base/*
 library/YOLO_weights/*
+/library/HOTACO/test_data_for_base/
